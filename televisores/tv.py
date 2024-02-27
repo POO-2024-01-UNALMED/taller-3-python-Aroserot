@@ -1,6 +1,6 @@
 from __future__ import annotations
-from marca import Marca
-from control import Control
+from televisores.marca import Marca
+from televisores.control import Control
 
 class TV:
     _numTV = 0
@@ -20,7 +20,7 @@ class TV:
         return cls._numTV
     
     @classmethod
-    def setNumTV(cls, numTV: int) -> None:
+    def setNum(cls, numTV: int) -> None:
         cls._numTV = numTV
 
     def turnOn(self) -> None:
