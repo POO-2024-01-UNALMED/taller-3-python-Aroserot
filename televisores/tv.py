@@ -42,7 +42,7 @@ class Control:
 class TV:
     _numTV = 0
 
-    def __init__(self, marca: Type[Marca], estado: bool) -> None:
+    def __init__(self, marca: Marca, estado: bool) -> None:
         self._marca = marca
         self._estado = estado
         self._volumen = 1
@@ -57,8 +57,9 @@ class TV:
         return cls._numTV
     
     @classmethod
-    def setNum(cls, numTV: int) -> None:
+    def setNumTV(cls, numTV: int) -> None:
         cls._numTV = numTV
+
 
     def turnOn(self) -> None:
         self._estado = True
