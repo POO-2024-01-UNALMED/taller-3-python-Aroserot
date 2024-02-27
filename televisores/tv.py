@@ -39,10 +39,14 @@ class Control:
     def setTv(self, tv: TV) -> None:
         self._tv = tv
 
+from __future__ import annotations
+from televisores.marca import Marca
+from televisores.control import Control
+
 class TV:
     _numTV = 0
 
-    def __init__(self, marca: Type[Marca], estado: bool) -> None:
+    def __init__(self, marca: Marca, estado: bool) -> None:
         self._marca = marca
         self._estado = estado
         self._volumen = 1
