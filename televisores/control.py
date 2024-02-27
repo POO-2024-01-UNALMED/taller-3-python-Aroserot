@@ -1,17 +1,15 @@
 from __future__ import annotations
-from televisores.tv import TV
 
 class Control:
     def __init__(self) -> None:
         self._tv = None
 
-    def enlazar(self, tv: TV) -> None:
+    def enlazar(self, tv: TV):
         self._tv = tv
         tv.setControl(self)
 
     def turnOn(self) -> None:
         self._tv.turnOn()
-
     def turnOff(self) -> None:
         self._tv.turnOff()
 
@@ -38,4 +36,5 @@ class Control:
     
     def setTv(self, tv: TV) -> None:
         self._tv = tv
-        
+
+from televisores.tv import TV
